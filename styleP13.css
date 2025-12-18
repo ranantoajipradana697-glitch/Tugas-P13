@@ -1,0 +1,117 @@
+/* --- TATA LETAK UTAMA --- */
+
+#wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.clear {
+    clear: both;
+}
+
+/* --- BAGIAN ATAS & BREAKING NEWS (Tidak Berubah) --- */
+
+#top-nav {
+    height: 50px;
+    padding: 0;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+#logo {
+    width: 15%;
+    background-color: #CC0000;
+    color: white;
+    padding: 10px;
+}
+
+#navigasi-utama {
+    width: 85%;
+    background-color: #0000FF;
+    color: white;
+    padding: 10px;
+}
+
+#breaking-news {
+    height: 30px;
+    background-color: #FFA500;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* --- 3 KOLOM UTAMA --- */
+
+/* --- 3 KOLOM UTAMA & PENGATURAN TINGGI MANUAL --- */
+
+#main-content {
+    margin: 0 15px;
+    /* TIDAK ADA CLEAR DI SINI */
+    overflow: hidden; /* Alternatif sederhana untuk menampung float, tapi clear lebih sesuai */
+}
+
+/* ... Properti .kolom dan .clear tidak berubah ... */
+
+/* Kolom Kanan: Penentu Tinggi Total */
+#kolom-kanan {
+    float: right; /* PENTING: Pindahkan ke kanan */
+    width: 25%;
+    height: 800px; /* TINGGI TOTAL MANUAL */
+    background-color: pink; /* Ganti warna untuk mencocokkan gambar Anda */
+}
+
+/* Kolom Kiri: float: left */
+#kolom-kiri {
+    float: left;
+    width: 25%;
+    height: 400px; /* 50% dari tinggi Kolom Kanan */
+    background-color: #ADD8E6; /* Biru Muda */
+}
+
+/* Kolom Tengah: float: left */
+#kolom-tengah {
+    float: left;
+    width: 50%;
+    height: 400px; /* 50% dari tinggi Kolom Kanan */
+    background-color: #90EE90; /* Hijau Muda */
+}
+
+#top-picks-area {
+    float: left;
+    width: 75%; 
+    height: 400px; /* JANGAN UBAH INI, karena ini adalah tinggi target */
+    background-color: purple; 
+    padding: 15px;
+    box-sizing: border-box; /* SANGAT PENTING: Padding dihitung ke dalam lebar/tinggi 400px */
+    
+    /* TAMBAHKAN INI: Jika konten di dalamnya terlalu panjang, potong. */
+    overflow: hidden; 
+    
+    /* HAPUS margin-top negatif jika ada, karena box-sizing sudah menangani border */
+}
+
+
+/* --- FOOTER --- */
+#footer {
+    height: 50px;
+    background-color: #333333;
+    color: white;
+    text-align: center;
+    clear: both; /* Membersihkan semua float */
+    padding: 15px;
+    margin-top: 10px;
+}
+/* Kita perlu memastikan Kolom Kanan di-float terlebih dahulu atau mengaturnya dengan float: right */
+
+/* Kita perlu memastikan Kolom Kanan di-float: right agar kolom kiri dan tengah bisa memenuhi sisi kiri */
+#kolom-kanan {
+    float: right; /* PENTING: Pindahkan ke kanan */
+    /* ... properti lain ... */
+}
+
+/* Kolom Kiri dan Tengah tetap float: left; */
+#kolom-kiri { float: left; /* ... */ }
+#kolom-tengah { float: left;/}
